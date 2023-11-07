@@ -29,9 +29,9 @@ def main():
         # Get Menu Selection from User
         selection = input("Enter Selection (1-5): ") 
 
-        if selection == "1": 
-            startTime = time.time() 
+        if selection == "1":  
             wordInput = input("Enter a word: ") 
+            startTime = time.time()
             if linearSearch(dictionary, wordInput) == -1:
                 endTime = time.time() 
                 timeElapsed = endTime - startTime
@@ -41,8 +41,8 @@ def main():
                 timeElapsed = endTime - startTime 
                 print("Word was found at position " + str(linearSearch(dictionary, wordInput)) + ". (" + str(timeElapsed) + " seconds)")
         elif selection == "2": 
-            startTime = time.time()
             word = input("Enter a word: ") 
+            startTime = time.time()
             if binarySearch(dictionary, word) == -1: 
                 endTime = time.time() 
                 timeElapsed = endTime - startTime
